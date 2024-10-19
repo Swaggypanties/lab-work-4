@@ -1,7 +1,6 @@
-import { IonAvatar, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonList, IonPage, IonRow, IonSearchbar, IonSegment, IonSegmentButton, IonSelect, IonSelectOption, IonTitle, IonToolbar, useIonAlert, useIonLoading } from '@ionic/react';
+import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonContent, IonGrid, IonHeader, IonImg, IonLabel, IonPage, IonRow, IonSearchbar, IonSegment, IonSegmentButton, IonTitle, IonToolbar, useIonAlert, useIonLoading } from '@ionic/react';
 import { useEffect, useState} from 'react';
 import { SearchResult, SearchType, useApi } from '../hooks/useApi';
-import { gameControllerOutline, tvOutline, videocamOutline } from 'ionicons/icons';
 import React from 'react';
 
 const moviepage: React.FC = () => {
