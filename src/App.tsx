@@ -35,8 +35,10 @@ import './theme/variables.css';
 
 import Register from './pages/register';
 import Login from './pages/login';
-import Page1 from './pages/page1';
+import Page1 from './pages/moviepage';
 import Page2 from './pages/page2';
+import moviepage from './pages/moviepage';
+import Details from './pages/Details';
 
 setupIonicReact();
 
@@ -48,7 +50,8 @@ const App: React.FC = () => (
         <Route path="/" component={Home} exact/>
         <Route path="/login" component={Login} exact/>
         <Route path="/register" component={Register} exact/>
-        <Route path="/page1" component={Page1} exact/>
+        <Route path="/moviepage" component={moviepage} exact/>
+        <Route path="/movies/:id" component={Details} exact />
         <Route path="/page2" component={Page2} exact/>
         </Route>
       </IonRouterOutlet>

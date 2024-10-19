@@ -15,6 +15,7 @@ const Home: React.FC = () => {
         <div className='button-container'>
           <IonButton routerLink='/login'>Login</IonButton>
           <IonButton routerLink='/register' color='secondary'> Register</IonButton>
+          <IonButton routerLink='/moviepage'>Search Movies</IonButton>
         </div>
         <ExploreContainer />
       </IonContent>
