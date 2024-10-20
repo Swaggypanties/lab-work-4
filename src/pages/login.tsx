@@ -15,7 +15,7 @@ const login: React.FC = () => {
     return (
         <IonPage>
             <IonHeader>
-                <IonToolbar>
+                <IonToolbar color={'primary'}>
                     <IonTitle>Movie app</IonTitle>
                 </IonToolbar>
             </IonHeader>
