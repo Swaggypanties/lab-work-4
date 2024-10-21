@@ -10,7 +10,11 @@ const login: React.FC = () => {
 
     async function login() {
        const res = await loginUser(username, password)
-       console.log(`${res ? 'Login success' : 'Login failed'}`)
+       if (!res) {
+            toast('Error logging with your credentials')
+       } else {
+        toast('You have logged in!')
+       }
     }
 
 
@@ -18,7 +22,7 @@ const login: React.FC = () => {
         <IonPage>
             <IonHeader>
                 <IonToolbar color={'primary'}>
-                    <IonTitle>Movie app</IonTitle>
+                    <IonTitle>Login</IonTitle>
                 </IonToolbar>
             </IonHeader>
             <IonContent className="ion-padding">

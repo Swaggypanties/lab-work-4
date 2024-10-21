@@ -5,6 +5,7 @@ import { getAnalytics } from "firebase/analytics";
 
 
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyDi1zPz1NrXuec2bSxNV0ITQMwabH5UY88",
   authDomain: "movieapp-a77ff.firebaseapp.com",
@@ -17,6 +18,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 export async function loginUser(username: string, password: string) {
     const email = `${username}@codedamn.com`
@@ -28,7 +30,21 @@ export async function loginUser(username: string, password: string) {
             return true
 
     } catch(error)  {
-        console.log(error)
+        toast(error.message, 4000)
         return false
     }
 }
+
+export async function registerUser(username: string, password: string) {
+    const email = `${username}@codedamn.com`
+    try {
+        const res = await firebaseConfig.auth().createUserWithEmailAndPassword(email, password)
+        console.log(res)
+        return true
+    }   catch(error) {
+        toast(error.message, 4000)
+        return false
+    }
+}
+    
+
