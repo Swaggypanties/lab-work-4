@@ -1,8 +1,12 @@
-function toast(message: string, duration = 2000) {
-    const toast = document.createElement('ion-toast')
-    toast.message = message
-    toast.duration = duration
+import { toastController } from '@ionic/core';
 
-    document.body.appendChild(toast)
-    return toast.present()
+// Function to show a toast notification
+export async function toast(message: string, duration = 2000) {
+    const toast = await toastController.create({
+        message,
+        duration,
+        position: 'bottom', // Optional: You can set the position ('top', 'middle', 'bottom')
+    });
+    return toast.present();
 }
+

@@ -2,7 +2,7 @@ import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInp
 import React, { useState } from 'react';
 import { loginUser } from '../firebaseConfig';
 import { Link } from 'react-router-dom';
-import { toast } from '../toast';
+import { toast } from '../toast'
 import { registerUser } from '../firebaseConfig';
 
 function Register() {

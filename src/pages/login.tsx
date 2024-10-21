@@ -2,9 +2,10 @@ import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInp
 import React, { useState } from 'react';
 import { loginUser } from '../firebaseConfig';
 import { Link } from 'react-router-dom';
+import { toast } from '../toast';
 
 
-const login: React.FC = () => {
+const Login: React.FC = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
 
@@ -41,4 +42,4 @@ const login: React.FC = () => {
     );
 };
 
-export default login;
+export default Login;
