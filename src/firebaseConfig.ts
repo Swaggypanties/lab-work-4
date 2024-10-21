@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 
 
@@ -18,13 +18,14 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
 
 export async function loginUser(username: string, password: string) {
     const email = `${username}@codedamn.com`
 
     try {
-        const res = await Firebase.auth().signInWithEmailAndPassword(email, password)
+        const auth = getAuth(); // Initialize Firebase Auth
+        const res = await signInWithEmailAndPassword(auth, email, password); // Login user
     
             console.log(res)
             return true
