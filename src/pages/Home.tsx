@@ -19,7 +19,6 @@ const Home: React.FC = () => {
           <div className='button-container'>
             <IonButton expand="block" routerLink='/login'>Login</IonButton>
             <IonButton expand="block" routerLink='/register' color='secondary'>Register</IonButton>
-            <IonButton expand="block" routerLink='/moviepage' color='tertiary'>Search Movies</IonButton>
           </div>
         </div>
 

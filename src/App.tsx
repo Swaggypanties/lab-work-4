@@ -52,7 +52,6 @@ const App: React.FC = () => (
         <Route path="/register" component={Register} exact/>
         <Route path="/moviepage" component={moviepage} exact/>
         <Route path="/movies/:id" component={Details} exact />
-        <Route path="/page2" component={Page2} exact/>
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>

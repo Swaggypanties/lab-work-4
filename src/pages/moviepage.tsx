@@ -2,7 +2,7 @@ import { IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCol, IonConte
 import { useEffect, useState } from 'react';
 import { SearchResult, SearchType, useApi } from '../hooks/useApi';
 import React from 'react';
-import './moviepage.css';
+
 
 const MoviePage: React.FC = () => {
   const { searchData } = useApi();
